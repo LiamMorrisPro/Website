@@ -10,52 +10,43 @@
 
 <body>
     <!-- Header -->
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">MySite</h1>
-
-            <!-- Hamburger Menu Button -->
-            <div class="menu-toggle" id="menu-toggle">
-                ☰
-            </div>
-
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="HeaderBase">
     </header>
 
     <!-- Main Content -->
-    <main>
-        <section id="home">
-            <h2>Welcome</h2>
-            <p>This is my new website built from scratch!</p>
-            <button id="helloBtn">Click Me</button>
-        </section>
+    <main class="MainBase">
 
-        <section id="about">
-            <h2>About</h2>
-            <p>A little bit about me goes here.</p>
-        </section>
+        <!-- scrolling text -->
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Some cool things I’ve worked on.</p>
-        </section>
+        <!-- grid -->
+        <div class="ContentGrid">
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: me@example.com</p>
-        </section>
+            <!-- explore -->
+            <div class="ColorBlock">
+                <div class="NavBar">
+                    <h1 class="TitleButton">Explore</h1>
+
+                    <hr>
+                    <a href="Pages/about.html" style="text-decoration: none;">
+                        <h2 class="LinkButton">Games</h2>
+                    </a>
+                    <a href="Pages/about.html" style="text-decoration: none;">
+                        <h2 class="LinkButton" style="background-color: aquamarine;">Art</h2>
+                    </a>
+                    <a href="Pages/about.html" style="text-decoration: none;">
+                        <h2 class="LinkButton" style="background-color: rgb(255, 127, 159);">Articles</h2>
+                    </a>
+                </div>
+
+            </div>
+            <!-- frontpage contents -->
+            <div class="ColorBlock">
+
+            </div>
+        </div>
+
+
     </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 MySite. All rights reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
