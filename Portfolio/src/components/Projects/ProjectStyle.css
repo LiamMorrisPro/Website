@@ -1,0 +1,76 @@
+body {
+    font-size: 20px;
+}
+
+
+h1, h2, h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.backButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18vh;
+  padding: 1rem;
+}
+
+.articleContainer {
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-right: auto;
+
+  font-size: 30px;
+}
+.subTitle {
+  display: flex;
+  flex-direction: row;
+  
+  font-size: 20px;
+}
+.subTitle h3 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+
+.articleBody {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  font-size: 20px;
+}
+
+.textBox {
+  background-color: var(--color-secondary);
+  border-radius: 1rem;
+  padding: 1rem;
+
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: auto;
+}
+
+.boxImage {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.codeWindow {
+  display: flex;
+}
+
