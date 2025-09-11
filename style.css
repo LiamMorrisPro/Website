@@ -13,7 +13,7 @@ body {
     color: #333;
 }
 
-/* Navbar */
+/* Navbar base */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -21,8 +21,14 @@ body {
     background: #222;
     color: white;
     padding: 1rem 2rem;
+    flex-wrap: wrap;
 }
 
+.logo {
+    font-size: 1.5rem;
+}
+
+/* Nav links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -39,35 +45,37 @@ body {
     text-decoration: underline;
 }
 
-/* Sections */
-main {
-    padding: 2rem;
-}
-
-section {
-    margin: 2rem 0;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #222;
-    color: white;
-    margin-top: 2rem;
-}
-
-/* Button */
-button {
-    padding: 0.7rem 1.2rem;
-    border: none;
-    background: #0077ff;
-    color: white;
-    font-size: 1rem;
+/* Hamburger button (hidden by default) */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-button:hover {
-    background: #005fbb;
+/* 📱 Mobile Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* show hamburger */
+    }
+
+    .nav-links {
+        display: none;
+        /* hide menu by default */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+        background: #333;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* show when active */
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
 }
