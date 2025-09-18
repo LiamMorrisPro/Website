@@ -5,45 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="style.css?v=1.2">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="HeaderBase">
+    <!-- Header / Banner -->
+    <header style="display: flex; justify-content: center;">
+        <div class="HeaderBase"></div>
     </header>
+
+
+    <!-- Icon Links -->
+    <div style="display: flex; flex-direction: row; justify-content: right; margin-left: 3rem; margin-right: 3rem;">
+        <h1>H1</h1>
+        <h1>H1</h1>
+        <h1>H1</h1>
+        <h1>H1</h1>
+    </div>
 
     <!-- Main Content -->
     <main class="MainBase">
 
-        <!-- scrolling text -->
 
-        <!-- grid -->
-        <div class="ContentGrid">
+        <!-- Explore -->
+        <div class="NavBar">
+            <h1 class="TitleButton">Explore</h1>
 
-            <!-- explore -->
-            <div class="ColorBlock">
-                <div class="NavBar">
-                    <h1 class="TitleButton">Explore</h1>
+            <!-- Navigation Links -->
+            <div class="NavContent">
+                <hr style="border-top: 3px dashed #ffffff; width: 90%; margin-bottom: auto;">
 
-                    <hr>
-                    <a href="Pages/about.html" style="text-decoration: none;">
-                        <h2 class="LinkButton">Games</h2>
-                    </a>
-                    <a href="Pages/about.html" style="text-decoration: none;">
-                        <h2 class="LinkButton" style="background-color: aquamarine;">Art</h2>
-                    </a>
-                    <a href="Pages/about.html" style="text-decoration: none;">
-                        <h2 class="LinkButton" style="background-color: rgb(255, 127, 159);">Articles</h2>
-                    </a>
+                <a href="#" onclick="loadPage('Components/HomeComponent.html'); return false;"
+                    style="text-decoration: none;">
+                    <h2 class="LinkButton" style="background-color: rgb(225, 127, 255);">Home</h2>
+                </a>
+                <a href="#" onclick="loadPage('Components/GamesComponent.html'); return false;"
+                    style="text-decoration: none;">
+                    <h2 class="LinkButton">Games</h2>
+                </a>
+                <a href="#" onclick="loadPage('Components/ArtComponent.html'); return false;"
+                    style="text-decoration: none;">
+                    <h2 class="LinkButton" style="background-color: aquamarine;"> Art</h2>
+                </a>
+                <a href="#" onclick="loadPage('Components/ArticlesComponent.html'); return false;"
+                    style="text-decoration: none;">
+                    <h2 class="LinkButton" style="background-color: rgb(255, 246, 127);">Articles</h2>
+                </a>
+                <a href="#" onclick="loadPage('Components/AboutComponent.html'); return false;"
+                    style="text-decoration: none;">
+                    <h2 class="LinkButton" style="background-color: rgb(255, 127, 159);">About</h2>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- frontpage content -->
+        <div id="content-area" class="MainFeed">
+
+            <h1 style="text-align: center; color: white; margin-bottom: 1rem;">Featured Content</h1>
+
+
+
+            <div class="ContentBlock">
+
+                <!-- Displayed article -->
+                <div class="DisplayContainer" style="width: 100%; height: 20rem;">
+                    <img src="/Resources/fogofwarRes/Fog2.PNG"></img>
+                    <div class="overlay"></div>
+                    <div class="image-text">Fog Of War - Article</div>
                 </div>
 
-            </div>
-            <!-- frontpage contents -->
-            <div class="ColorBlock">
 
+                <!-- Side stuff -->
+                <div class="ColorBlock" style="width: 40%; background-color: aliceblue;"></div>
             </div>
+
         </div>
+
 
 
     </main>

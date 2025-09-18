@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #38353a;
+    --primary-color: #262626;
     --secondary-color: #ffffff;
-    --background-color: #c0b9c3;
+    --background-color: #000000;
     --text-color: #38353a;
 }
 
@@ -27,6 +27,24 @@ body {
     line-height: 1.6;
     background-color: var(--background-color);
     color: #333;
+
+
+}
+
+h1 {
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.396);
+    color: var(--secondary-color);
+}
+
+hr {
+    border: none;
+    /* remove default border */
+    border-top: 3px dashed #ffffff;
+    /* 2px thick dotted line */
+    width: 100%;
+    /* optional width */
+    margin: 20px auto;
+    /* center it with vertical spacing */
 }
 
 /* Header base */
@@ -36,23 +54,25 @@ body {
     margin-top: 2rem;
     margin-left: 3rem;
     margin-right: 3rem;
+
+    width: 100%;
     height: 10rem;
     border-radius: 1rem;
 }
 
+
+/* Links */
+
+
+
 /* Main base */
 .MainBase {
-    display: block;
+    display: flex;
+    flex-direction: row;
     margin-left: 3rem;
     margin-right: 3rem;
+    justify-content: center;
 
-}
-
-.ContentGrid {
-    display: grid;
-    grid-template-columns: 0.4fr 2fr;
-    column-gap: 1rem;
-    margin-top: 1rem;
 }
 
 .ColorBlock {
@@ -65,17 +85,29 @@ body {
     display: flex;
     flex-direction: column;
     justify-items: center;
+
 }
 
-.NavBar {
-    display: flex;
-    flex-direction: column;
-}
+/*------------------ Navigation ----------------------*/
+
 
 .TitleButton {
     background: var(--primary-color);
     text-align: center;
-    color: var(--secondary-color);
+
+}
+
+.NavBar {
+    background: var(--primary-color);
+    padding: 1rem;
+    width: 20%;
+    margin-right: 1rem;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }
 
 .LinkButton {
@@ -84,17 +116,137 @@ body {
     color: var(--primary-color);
     border-radius: 0.5rem;
     margin-top: 0.5rem;
+}
+
+/*------------------ Main Feed ----------------------*/
+
+.MainFeed {
+    background: var(--primary-color);
+    padding: 1rem;
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.ContentBlock {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.DisplayContainer {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.DisplayContainer img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+
+
+    /* zooms inside container */
+    /* change what part of the image is visible */
+    object-position: 100% 39%;
+    /* X% Y% */
+
 
 }
 
+.DisplayContainer img:hover {
+    transform: scale(1.1);
+    /* zoom in 20% */
+}
+
+/* Gradient overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    /* how much of the image fades */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    pointer-events: none;
+    /* lets clicks go through */
+}
+
+.image-text {
+    position: absolute;
+    bottom: 10px;
+    /* distance from bottom */
+    left: 10px;
+    /* distance from left */
+    color: rgb(255, 255, 255);
+    /* text color */
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* readability */
+}
+
+/*------------------ Alternate sizes ----------------------*/
+
+/* 📱 Small Screen Styles */
+@media (max-width: 1200px) {
+
+    /* Main Content */
+    .ContentBlock {
+        flex-direction: column;
+    }
+}
 
 
 
 /* 📱 Mobile Styles */
 @media (max-width: 768px) {
-    .ContentGrid {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin-top: 1rem;
+
+    .MainBase {
+        flex-direction: column;
+    }
+
+
+    /* Main Content */
+    .MainFeed {
+        width: 100%;
+    }
+
+    .ContentBlock {
+        flex-direction: column;
+    }
+
+    /* Navigation */
+    .NavBar {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .NavContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .LinkButton {
+        width: 100px;
+    }
+
+    /* Style */
+    hr {
+        display: none;
     }
 }
