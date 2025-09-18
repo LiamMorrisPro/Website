@@ -214,8 +214,16 @@ hr {
 /* 📱 Mobile Styles */
 @media (max-width: 768px) {
 
+
+    .HeaderBase {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
     .MainBase {
         flex-direction: column;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
 
